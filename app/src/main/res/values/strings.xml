@@ -7,4 +7,5 @@
     <string name="title_activity_login">LoginActivity</string>
     <string name="title_activity_personal_center_">Personal_center_Activity</string>
     <string name="title_activity_personal_detail_">Personal_detail_Activity</string>
+    <string name="title_activity_qr_code">QrCodeActivity</string>
 </resources>
