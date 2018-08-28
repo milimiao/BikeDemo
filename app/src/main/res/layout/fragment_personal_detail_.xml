@@ -1,0 +1,129 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="com.example.a91319.bikedemo.Personal_detail_Fragment">
+
+    <!-- TODO: Update blank fragment layout -->
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical">
+       
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="60dp">
+           
+           <TextView
+               android:id="@+id/name_detail"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="头像"
+               android:layout_gravity="center"
+               android:textSize="15dp"
+               android:layout_marginLeft="15dp"
+               android:layout_weight="1"/>
+
+           <de.hdodenhof.circleimageview.CircleImageView
+               xmlns:app="http://schemas.android.com/apk/res-auto"
+               android:id="@+id/profile_image"
+               android:layout_width="30dp"
+               android:layout_height="30dp"
+               android:layout_gravity="center"
+               android:src="@drawable/rog"
+               app:civ_border_width="2dp"
+               app:civ_border_color="#FF000000"
+               android:layout_marginRight="5dp"/>
+
+           <ImageView
+               android:id="@+id/personal_fanhui"
+               android:layout_width="17dp"
+               android:layout_height="17dp"
+               android:layout_gravity="center"
+               android:background="@mipmap/ic_launcher"
+               android:layout_marginRight="5dp"/>
+       </LinearLayout>
+       <ImageView
+           android:layout_width="match_parent"
+           android:layout_height="4dp"
+           android:background="#dfdfdf"/>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="60dp">
+           
+           <TextView
+               android:id="@+id/detail_b"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="昵称"
+               android:layout_gravity="center"
+               android:textSize="15dp"
+               android:layout_marginLeft="15dp"
+               android:layout_weight="1"/>
+
+           <ImageView
+               android:id="@+id/personal_fanhui_b"
+               android:layout_width="17dp"
+               android:layout_height="17dp"
+               android:layout_gravity="center"
+               android:background="@mipmap/ic_launcher"
+               android:layout_marginRight="5dp"/>
+       </LinearLayout>
+       <ImageView
+           android:layout_width="match_parent"
+           android:layout_height="4dp"
+           android:background="#dfdfdf"/>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="60dp">
+
+           <TextView
+               android:id="@+id/detail_c"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="姓名"
+               android:layout_gravity="center"
+               android:textSize="15dp"
+               android:layout_marginLeft="15dp"
+               android:layout_weight="1"/>
+
+           <ImageView
+               android:id="@+id/personal_fanhui_c"
+               android:layout_width="17dp"
+               android:layout_height="17dp"
+               android:layout_gravity="center"
+               android:background="@mipmap/ic_launcher"
+               android:layout_marginRight="5dp"/>
+       </LinearLayout>
+       <ImageView
+           android:layout_width="match_parent"
+           android:layout_height="4dp"
+           android:background="#dfdfdf"/>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="60dp">
+
+           <TextView
+               android:id="@+id/detail_d"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="实名认证"
+               android:layout_gravity="center"
+               android:textSize="15dp"
+               android:layout_marginLeft="15dp"
+               android:layout_weight="1"/>
+
+           <ImageView
+               android:id="@+id/personal_fanhui_d"
+               android:layout_width="17dp"
+               android:layout_height="17dp"
+               android:layout_gravity="center"
+               android:background="@mipmap/ic_launcher"
+               android:layout_marginRight="5dp"/>
+       </LinearLayout>
+
+
+
+   </LinearLayout>
+
+</RelativeLayout>
