@@ -6,13 +6,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.a91319.bikedemo.QrCodeActivity"
-    tools:showIn="@layout/activity_qr_code">
+    tools:context="com.example.a91319.bikedemo.SettleActivity"
+    tools:showIn="@layout/activity_settle">
 
     <fragment
-        android:id="@+id/fragment_qrcode"
+        android:id="@+id/fragment_settle"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:name="com.example.a91319.bikedemo.QrCodeFragment"/>
+        android:name="com.example.a91319.bikedemo.Settleragment"/>
 
 </android.support.constraint.ConstraintLayout>

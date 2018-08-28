@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--用于制作结算页面的圆角边框-->
+<shape xmlns:app="http://schemas.android.com/apk/res-auto"
+       xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <solid android:color="#ff6262"/>
+    <corners android:topLeftRadius="20dp" android:topRightRadius="20dp"/>
+
+</shape>
