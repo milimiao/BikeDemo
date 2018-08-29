@@ -8,11 +8,11 @@
 
     <ImageButton
         android:id="@+id/qrcode"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@mipmap/ic_launcher"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:background="@drawable/pic_qrcode"
         android:layout_gravity="bottom|center"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="30dp"
         />
 
     <android.support.design.widget.FloatingActionButton
@@ -42,8 +42,6 @@
         android:layout_gravity="bottom|left"
         android:layout_marginBottom="150dp"
         android:layout_marginLeft="10dp"/>
-
-
 
 
 </FrameLayout>
