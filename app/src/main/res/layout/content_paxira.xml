@@ -9,4 +9,12 @@
     tools:context="com.example.a91319.bikedemo.PaxiraActivity"
     tools:showIn="@layout/activity_paxira">
 
+    <fragment
+        android:id="@+id/fragment_paxira"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:name="com.example.a91319.bikedemo.Paxirafragment"
+        />
+"
+
 </android.support.constraint.ConstraintLayout>
