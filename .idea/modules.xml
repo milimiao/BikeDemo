@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BikeDemo.iml" filepath="$PROJECT_DIR$/BikeDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dao.example.generator/dao.example.generator.iml" filepath="$PROJECT_DIR$/dao.example.generator/dao.example.generator.iml" />
     </modules>
   </component>
 </project>
