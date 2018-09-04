@@ -44,6 +44,8 @@
             android:name=".PaxiraActivity"
             android:label="@string/title_activity_paxira"
             android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".TestDaoActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
