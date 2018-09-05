@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+import com.example.a91319.bikedemo.R;
+
 public class Personal_detail_Activity extends AppCompatActivity {
 
     @Override
