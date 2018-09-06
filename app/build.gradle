@@ -38,10 +38,10 @@ dependencies {
     compile 'com.android.support:support-v4:25.3.1'
     compile 'com.lsjwzh:materialloadingprogressbar:0.5.8-RELEASE'
     compile 'de.hdodenhof:circleimageview:2.2.0'
-
+    //地图api
     compile 'com.amap.api:map2d:latest.integration'
+    //定位api
     compile 'com.amap.api:location:latest.integration'
-
     compile 'org.greenrobot:greendao:3.2.0'
     compile 'com.jakewharton:butterknife:8.8.1'
     testCompile 'junit:junit:4.12'
