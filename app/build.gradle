@@ -14,7 +14,7 @@ android {
     defaultConfig {
         applicationId "com.example.a91319.bikedemo"
         minSdkVersion 15
-        targetSdkVersion 25
+        targetSdkVersion 22
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -44,6 +44,10 @@ dependencies {
     compile 'com.amap.api:location:latest.integration'
     compile 'org.greenrobot:greendao:3.2.0'
     compile 'com.jakewharton:butterknife:8.8.1'
+    //retrofit网络请求库
+    compile 'com.squareup.retrofit2:retrofit:2.4.0'
+    //使用gson转换
+    compile 'com.squareup.retrofit2:converter-gson:2.4.0'
     testCompile 'junit:junit:4.12'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 }

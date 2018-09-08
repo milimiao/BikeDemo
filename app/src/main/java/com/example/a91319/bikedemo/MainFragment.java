@@ -16,17 +16,21 @@ import com.amap.api.location.AMapLocationClientOption;
 import com.amap.api.location.AMapLocationListener;
 import com.amap.api.maps2d.AMap;
 import com.amap.api.maps2d.MapView;
+import com.amap.api.maps2d.model.LatLng;
+import com.amap.api.maps2d.model.Marker;
+import com.amap.api.maps2d.model.MarkerOptions;
 import com.amap.api.maps2d.model.MyLocationStyle;
+
+import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
 
-/**
- * A simple {@link Fragment} subclass.
- */
+
 public class MainFragment extends Fragment implements AMap.OnMyLocationChangeListener {
+
 
 
     @BindView(R.id.map_View)
@@ -36,7 +40,8 @@ public class MainFragment extends Fragment implements AMap.OnMyLocationChangeLis
     //AMap是地图的控制器类 用于地图图层的切换和改变地图的状态 添加标记 绘制几何图形
     AMap aMap;
     MyLocationStyle mylocationstyle;
-    //ArrayList<Marker> arr = new ArrayList<Marker>();
+    //标记数组
+    ArrayList<Marker> arr = new ArrayList<Marker>();
 
     public AMapLocationClient mapLocationClient = null;
     public AMapLocationClientOption aMapLocationClientOption = null;
@@ -45,8 +50,6 @@ public class MainFragment extends Fragment implements AMap.OnMyLocationChangeLis
 
         @Override
         public void onLocationChanged(AMapLocation aMapLocation) {
-
-
 
                 if(aMapLocation.getErrorCode()==0){
                     Toast.makeText(getContext(), "定位成功", Toast.LENGTH_LONG).show();
@@ -62,7 +65,7 @@ public class MainFragment extends Fragment implements AMap.OnMyLocationChangeLis
                     Log.e("AmapError", "location Error, ErrCode:"
                             + aMapLocation.getErrorCode() + ", errInfo:"
                             + aMapLocation.getErrorInfo()+aMapLocation.getLatitude()+" "+aMapLocation.getLongitude()+" "+aMapLocation.getLocationType());
-                    Toast.makeText(getContext(), "定位失败", Toast.LENGTH_LONG).show();
+                    //Toast.makeText(getContext(), "定位失败", Toast.LENGTH_LONG).show();
 
                 }
 
@@ -90,7 +93,7 @@ public class MainFragment extends Fragment implements AMap.OnMyLocationChangeLis
         mylocationstyle = new MyLocationStyle();
         aMap.setMyLocationStyle(mylocationstyle);
         aMap.getUiSettings().setMyLocationButtonEnabled(true);
-        //aMap.setOnMyLocationChangeListener(this);
+        aMap.setOnMyLocationChangeListener(this);
         aMap.setMyLocationEnabled(true);
         mylocationstyle.myLocationType(MyLocationStyle.LOCATION_TYPE_LOCATE);
         //对定位进行初始化
@@ -101,7 +104,7 @@ public class MainFragment extends Fragment implements AMap.OnMyLocationChangeLis
         return view;
     }
 
-   /*private void addData(LatLng latlng) {
+    private void addData(LatLng latlng) {
         for (int m = 0; m<arr.size(); m++) {
             arr.get(m).destroy();
         }
@@ -112,13 +115,15 @@ public class MainFragment extends Fragment implements AMap.OnMyLocationChangeLis
             arr.add(marker);
         }
 
-    }*/
+    }
 
 
     private void init() {
         aMapLocationClientOption = new AMapLocationClientOption();
         //选择定位模式
-        aMapLocationClientOption.setLocationMode(AMapLocationClientOption.AMapLocationMode.Device_Sensors);
+        //aMapLocationClientOption.setLocationMode(AMapLocationClientOption.AMapLocationMode.Device_Sensors);
+        //使用高精度定位模式
+        aMapLocationClientOption.setLocationMode(AMapLocationClientOption.AMapLocationMode.Hight_Accuracy);
         //设置单次定位
         aMapLocationClientOption.setOnceLocation(true);
         aMapLocationClientOption.setOnceLocationLatest(true);
@@ -140,12 +145,7 @@ public class MainFragment extends Fragment implements AMap.OnMyLocationChangeLis
         mapLocationClient.onDestroy();
     }
 
-    //重新加载地图
-    @Override
-    public void onResume() {
-        super.onResume();
-        mapView.onResume();
-    }
+
 
     @Override
     public void onPause() {
@@ -169,6 +169,15 @@ public class MainFragment extends Fragment implements AMap.OnMyLocationChangeLis
 
     @Override
     public void onMyLocationChange(Location location) {
-        //addData(new LatLng(location.getLatitude(),location.getLongitude()));
+       addData(new LatLng(location.getLatitude(),location.getLongitude()));
     }
+
+    //以下为获取动态权限代码
+    @Override
+    public void onResume() {
+        super.onResume();
+        mapView.onResume();
+    }
+
+
 }
