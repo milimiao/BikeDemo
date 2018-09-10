@@ -8,7 +8,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.amap.api.location.AMapLocation;
 import com.amap.api.location.AMapLocationClient;
@@ -52,7 +51,7 @@ public class MainFragment extends Fragment implements AMap.OnMyLocationChangeLis
         public void onLocationChanged(AMapLocation aMapLocation) {
 
                 if(aMapLocation.getErrorCode()==0){
-                    Toast.makeText(getContext(), "定位成功", Toast.LENGTH_LONG).show();
+                    //Toast.makeText(getContext(), "定位成功", Toast.LENGTH_LONG).show();
                     //获取经纬度
                     aMapLocation.getLatitude();
                     aMapLocation.getLongitude();

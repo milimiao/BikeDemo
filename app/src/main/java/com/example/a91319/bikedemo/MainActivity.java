@@ -9,7 +9,17 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.example.a91319.bikedemo.R;
+import com.example.a91319.bikedemo.net.NetManager;
+import com.example.a91319.bikedemo.net.requests.LocationRequest;
+import com.example.a91319.bikedemo.net.responeses.BaseResponse;
+import com.example.a91319.bikedemo.net.responeses.BikeResponese;
+import com.example.a91319.bikedemo.net.services.BikeService;
+
+import java.util.ArrayList;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,6 +31,26 @@ public class MainActivity extends AppCompatActivity {
         toolbar.setTitle("Bicycle");
         setSupportActionBar(toolbar);
         toolbar.setNavigationIcon(R.drawable.arrow_left);
+
+
+        //网路测试
+        LocationRequest locationRequest = new LocationRequest();
+        locationRequest.setLat(24.5328410);
+        locationRequest.setLng(118.1687860);
+        NetManager.getInstance()
+                .create(BikeService.class)
+                .getNearBikes(locationRequest.toMap())
+                .enqueue(new Callback<BaseResponse<ArrayList<BikeResponese>>>() {
+            @Override
+            public void onResponse(Call<BaseResponse<ArrayList<BikeResponese>>> call, Response<BaseResponse<ArrayList<BikeResponese>>> response) {
+                 ArrayList<BikeResponese> bikeResponeseArrayList=response.body().getData();
+            }
+
+            @Override
+            public void onFailure(Call<BaseResponse<ArrayList<BikeResponese>>> call, Throwable t) {
+                 String errorMessage = t.getLocalizedMessage();
+            }
+        });
 
         //这是一条更新
 
