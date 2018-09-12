@@ -1,4 +1,4 @@
-package com.example.a91319.bikedemo;
+package com.example.a91319.bikedemo.activity;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.example.a91319.bikedemo.R;
 import com.example.a91319.bikedemo.contract.BikeContract;
 import com.example.a91319.bikedemo.net.requests.LocationRequest;
 import com.example.a91319.bikedemo.net.responeses.BikeResponese;

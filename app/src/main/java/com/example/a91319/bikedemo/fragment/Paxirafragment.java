@@ -1,4 +1,4 @@
-package com.example.a91319.bikedemo;
+package com.example.a91319.bikedemo.fragment;
 
 
 import android.os.Bundle;
@@ -10,6 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.example.a91319.bikedemo.Message;
+import com.example.a91319.bikedemo.R;
 
 import java.util.ArrayList;
 

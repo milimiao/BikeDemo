@@ -1,4 +1,4 @@
-package com.example.a91319.bikedemo;
+package com.example.a91319.bikedemo.activity;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;

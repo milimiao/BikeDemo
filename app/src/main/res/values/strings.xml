@@ -15,4 +15,11 @@
     <string name="gpsNotifyMsg">当前应用需要打开定位功能。\n\n请点击\"设置\"-\"定位服务\"-打开定位功能。</string>
     <string name="setting">设置</string>
     <string name="cancel">取消</string>
+    <string name="holder_username">用户名</string>
+    <string name="holder_password">密码</string>
+    <string name="button_login">登录</string>
+    <string name="button_register">注册</string>
+    <string name="error_username_empty">用户名不能为空</string>
+    <string name="error_password_len">密码长度有误</string>
+    <string name="error_password_confirm">密码确认未通过</string>
 </resources>

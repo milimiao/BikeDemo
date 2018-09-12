@@ -1,4 +1,4 @@
-package com.example.a91319.bikedemo;
+package com.example.a91319.bikedemo.fragment;
 
 
 import android.location.Location;
@@ -19,6 +19,7 @@ import com.amap.api.maps2d.model.LatLng;
 import com.amap.api.maps2d.model.Marker;
 import com.amap.api.maps2d.model.MarkerOptions;
 import com.amap.api.maps2d.model.MyLocationStyle;
+import com.example.a91319.bikedemo.R;
 
 import java.util.ArrayList;
 

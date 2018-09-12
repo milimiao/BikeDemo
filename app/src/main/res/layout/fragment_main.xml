@@ -4,15 +4,7 @@
              android:layout_width="match_parent"
              android:layout_height="match_parent"
              android:background="#bfbfbf"
-             tools:context="com.example.a91319.bikedemo.MainFragment">
-
-    <com.amap.api.maps2d.MapView
-        android:id="@+id/map_View"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-
-    </com.amap.api.maps2d.MapView>
+             tools:context="com.example.a91319.bikedemo.fragment.MainFragment">
 
     <ImageButton
         android:id="@+id/qrcode"
@@ -50,6 +42,14 @@
         android:layout_gravity="bottom|left"
         android:layout_marginBottom="150dp"
         android:layout_marginLeft="10dp"/>
+
+    <com.amap.api.maps2d.MapView
+        android:id="@+id/map_View"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </com.amap.api.maps2d.MapView>
 
 
 </FrameLayout>

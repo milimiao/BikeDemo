@@ -1,4 +1,4 @@
-package com.example.a91319.bikedemo;
+package com.example.a91319.bikedemo.fragment;
 
 
 import android.os.Bundle;
@@ -7,14 +7,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.a91319.bikedemo.R;
+
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Personal_center_Fragment extends Fragment {
+public class Personal_detail_Fragment extends Fragment {
 
 
-    public Personal_center_Fragment() {
+    public Personal_detail_Fragment() {
         // Required empty public constructor
     }
 
@@ -23,7 +25,7 @@ public class Personal_center_Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_personal_center_, container, false);
+        return inflater.inflate(R.layout.fragment_personal_detail_, container, false);
     }
 
 }

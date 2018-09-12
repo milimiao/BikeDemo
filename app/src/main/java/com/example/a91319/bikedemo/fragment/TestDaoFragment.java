@@ -1,4 +1,4 @@
-package com.example.a91319.bikedemo;
+package com.example.a91319.bikedemo.fragment;
 
 
 import android.os.Bundle;
@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.a91319.bikedemo.R;
 import com.example.edu.mytest.dao.DaoMaster;
 import com.example.edu.mytest.dao.RideRecord;
 

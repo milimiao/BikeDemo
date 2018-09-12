@@ -6,13 +6,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.a91319.bikedemo.Personal_center_Activity"
+    tools:context="com.example.a91319.bikedemo.activity.Personal_center_Activity"
     tools:showIn="@layout/activity_personal_center_">
 
     <fragment
         android:id="@+id/fragment_personal_center"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:name="com.example.a91319.bikedemo.Personal_center_Fragment"/>
+        android:name="com.example.a91319.bikedemo.fragment.Personal_center_Fragment"/>
 
 </android.support.constraint.ConstraintLayout>
