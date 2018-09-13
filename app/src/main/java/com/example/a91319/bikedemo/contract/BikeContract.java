@@ -16,17 +16,25 @@ public interface BikeContract {
 
     //返回一个call对象
     interface Model {
+        //获得附近单车
         Call<BaseResponse<ArrayList<BikeResponese>>> getNearBikess(LocationRequest locationRequest);
+        //在附近增加单车
+        Call<BaseResponse<String>> generateBikeByLocation(LocationRequest locationRequest);
     }
 
     interface View {
         void showLoding();
         void hideLoding();
         void showErrorMessage(String message);
-        void  onLoadNearBikesSuccess(ArrayList<BikeResponese> bikes);
+        void onLoadNearBikesSuccess(ArrayList<BikeResponese> bikes);
+        void onGrenerateBikeSuccess();
     }
 
     interface Presenter {
+        //获取附近单车
         void doGetNearBikes(LocationRequest locationRequest);
+
+        //在附近刷新一辆单车
+        void doGenerateBikeByLocation(LocationRequest locationRequest);
     }
 }

@@ -50,4 +50,23 @@ public class BikePresenter implements BikeContract.Presenter {
         });
 
     }
+
+    @Override
+    public void doGenerateBikeByLocation(LocationRequest locationRequest) {
+        view.showLoding();
+        bikeModel.generateBikeByLocation(locationRequest).enqueue(new Callback<BaseResponse<String>>() {
+            @Override
+            public void onResponse(Call<BaseResponse<String>> call, Response<BaseResponse<String>> response) {
+                view.hideLoding();
+                view.onGrenerateBikeSuccess();
+            }
+
+            @Override
+            public void onFailure(Call<BaseResponse<String>> call, Throwable t) {
+                view.showErrorMessage("新增单车失败");
+                view.hideLoding();
+            }
+        });
+
+    }
 }

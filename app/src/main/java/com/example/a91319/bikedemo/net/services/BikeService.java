@@ -20,20 +20,21 @@ import retrofit2.http.QueryMap;
 
 public interface BikeService {
 
-    //获取附近单车
+    // TODO: 2018/9/13  获取附近单车
     @GET("api/bikes")
     Call<BaseResponse<ArrayList<BikeResponese>>> getNearBikes(@QueryMap Map<String,Object> locationMap);
 
-    //手动添加单车
+    // TODO: 2018/9/13  手动添加单车
     @POST("api/generate_bikes")
     Call<BaseResponse<String>> generateBikeByLocation(@Body LocationRequest locationRequest);
 
+    // TODO: 2018/9/13 解锁单车
     @POST("api/unlock")
     Call<BaseResponse<BikeResponese>> unlockBike(@Body BikeRequest bikeRequest);
 
+    // TODO: 2018/9/13 单车开锁
     @POST("api/lock")
     Call<BaseResponse<BikeResponese>> lockBike(@Body BikeRequest bikeRequest);
-
 
 
 

@@ -36,7 +36,7 @@
         android:supportsRtl="true"
         android:name=".BikeApplication"
         android:theme="@style/AppTheme">
-        <service android:name="com.amap.api.location.APSService"/>
+
         //开发者申请的key
         <meta-data
             android:name="com.amap.api.v2.apikey"
@@ -90,6 +90,10 @@
         </activity>
         <activity android:name=".activity.UserRegisterActivity">
         </activity>
+
+        //定位服务
+        <service android:name="com.amap.api.location.APSService"/>
+
     </application>
 
 </manifest>

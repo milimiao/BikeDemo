@@ -13,6 +13,7 @@ public interface UserContract {
 
     interface Model {
 
+        //获取用户信息
         Call<BaseResponse<MyInfoResponese>> getMyInfo();
 
     }

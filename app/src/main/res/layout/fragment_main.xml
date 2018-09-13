@@ -6,6 +6,11 @@
              android:background="#bfbfbf"
              tools:context="com.example.a91319.bikedemo.fragment.MainFragment">
 
+    <com.amap.api.maps2d.MapView
+        android:id="@+id/map_View"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
     <ImageButton
         android:id="@+id/qrcode"
         android:layout_width="110dp"
@@ -28,8 +33,7 @@
         />
 
     <com.lsjwzh.widget.materialloadingprogressbar.CircleProgressBar
-        android:id="@+id/progressBar"
-
+        android:id="@+id/refreshDataProgressBar"
         app:mlpb_show_arrow="true"
         app:mlpb_arrow_height="5dp"
         app:mlpb_arrow_width="10dp"
@@ -43,10 +47,15 @@
         android:layout_marginBottom="150dp"
         android:layout_marginLeft="10dp"/>
 
-    <com.amap.api.maps2d.MapView
-        android:id="@+id/map_View"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        //添加单车按钮
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/generateBikeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:src="@mipmap/ic_launcher"/>
+
+
 
 
     </com.amap.api.maps2d.MapView>

@@ -20,4 +20,9 @@ public class BikeModel implements BikeContract.Model {
     public Call<BaseResponse<ArrayList<BikeResponese>>> getNearBikess(LocationRequest locationRequest) {
         return NetManager.getInstance().create(BikeService.class).getNearBikes(locationRequest.toMap());
     }
+
+    @Override
+    public Call<BaseResponse<String>> generateBikeByLocation(LocationRequest locationRequest) {
+        return NetManager.getInstance().create(BikeService.class).generateBikeByLocation(locationRequest);
+    }
 }

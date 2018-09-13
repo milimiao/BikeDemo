@@ -108,4 +108,9 @@ public class MainActivity extends AppCompatActivity implements BikeContract.View
     public void onLoadNearBikesSuccess(ArrayList<BikeResponese> bikes) {
           bikeResponeses=bikes;
     }
+
+    @Override
+    public void onGrenerateBikeSuccess() {
+
+    }
 }

@@ -28,6 +28,7 @@ public interface AuthContract {
     }
 
     interface Presenter {
+
          void doRegisterUser(UserRegisterRequest userRegisterRequest);
 
          void doLoginUser(LoginRequest loginRequest);
