@@ -7,9 +7,9 @@ package com.example.a91319.bikedemo.net.requests;
 public class LoginRequest {
 
     //固定值 忽略
-    private String grant_type;
+    private String grant_type="password";
     private String client_secret;
-    private int client_id;
+    private int client_id=2;
 
     private String username;
     private String password;

@@ -1,5 +1,6 @@
 package com.example.a91319.bikedemo.net;
 
+import com.example.a91319.bikedemo.managers.SpManager;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -35,13 +36,17 @@ public class NetManager {
             synchronized (NetManager.class){
                 Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd HH:mm:ss").create();
 
-                OkHttpClient okHttpClient = new OkHttpClient.Builder().addInterceptor(new Interceptor() {
+                OkHttpClient okHttpClient = new OkHttpClient.Builder()
+                        .authenticator(new MyAuthenticator())
+                        .addInterceptor(new Interceptor() {
                     @Override
                     public Response intercept(Chain chain) throws IOException {
                         //重新调用request 实现一个公共的头部
+                        String authString="Bearer "+ SpManager.getDefaultSp().getString("access_token");
                         Request request = chain.request()
                                 .newBuilder()
                                 .header("Accept","application/json")
+                                .header("Authorization",authString)  //每次访问都会携带这个token 用户认证
                                 .build();
 
                         return chain.proceed(request);

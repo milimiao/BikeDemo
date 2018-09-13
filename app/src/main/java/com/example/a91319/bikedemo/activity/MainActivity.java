@@ -11,17 +11,24 @@ import android.view.View;
 
 import com.example.a91319.bikedemo.R;
 import com.example.a91319.bikedemo.contract.BikeContract;
+import com.example.a91319.bikedemo.contract.UserContract;
 import com.example.a91319.bikedemo.net.requests.LocationRequest;
 import com.example.a91319.bikedemo.net.responeses.BikeResponese;
+import com.example.a91319.bikedemo.net.responeses.MyInfoResponese;
 import com.example.a91319.bikedemo.presenter.BikePresenter;
+import com.example.a91319.bikedemo.presenter.UserPresenter;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity implements BikeContract.View {
+public class MainActivity extends AppCompatActivity implements BikeContract.View, UserContract.View {
 
     private BikePresenter bikePresenter=null;
 
+    private UserPresenter userPresenter=null;
+
     private ArrayList<BikeResponese> bikeResponeses = new ArrayList<>();
+
+    private MyInfoResponese myInfoResponese=null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +48,8 @@ public class MainActivity extends AppCompatActivity implements BikeContract.View
         bikePresenter.doGetNearBikes(locationRequest);
 
 
-
+        userPresenter = new UserPresenter(this);
+        userPresenter.doGetMyInfo();
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -83,6 +91,11 @@ public class MainActivity extends AppCompatActivity implements BikeContract.View
 
     @Override
     public void hideLoding() {
+
+    }
+
+    @Override
+    public void onLoadMyInfoSuccess(MyInfoResponese myInfoResponese) {
 
     }
 
